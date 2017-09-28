@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="store">
+<head>
+	<title>Starting an Anjular Tutorial</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+
+
+		<div ng-controller="StoreController as store">
+
+			<div ng-repeat="product in store.products">
+				<div ng-hide="store.product.soldOut">	
+					<h1> {{product.name}}</h1>
+					<h2>${{product.price}}</h2>
+					<p>{{product.description}}</p>
+					<button class="btn btn-default" ng-show="product.canPurchase">Add to cart</button>
+				</div>
+
+			</div>
+			
+ 
+
+
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	</div>
+</body>
+</html>
