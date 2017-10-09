@@ -10,10 +10,10 @@
 
 		<div ng-controller="StoreController as store" class="list-group">
 
-			<div ng-repeat="product in store.products">
+			<div ng-repeat="product in store.gems">
 				<!-- Repeat section for each product -->
-				
-				<div ng-hide="store.product.soldOut" class="list-group-item">	
+
+				<div ng-hide="product.soldOut" class="list-group-item">	
 					<h1> {{product.name}}</h1>
 					<h2>${{product.price}}</h2>
 					<p>{{product.description}}</p>
